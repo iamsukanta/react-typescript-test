@@ -14,7 +14,7 @@ const SidebarLayout: FC<SidebarLayoutProps> = () => {
     <>
         <div className='sidebar-layout'>
             <div className='sidebar-section'>
-                <div className='sidebar'>
+                <div className='sidebar-root'>
                     <Sidebar></Sidebar>
                 </div>
                 <div className='main-content'>
