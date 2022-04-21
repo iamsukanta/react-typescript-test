@@ -1,9 +1,16 @@
+import { useState } from "react";
 const Sidebar = () => {
+    const [isActive, setActive] = useState(false);
+
+    const toggleClass = () => {
+        setActive(!isActive);
+    };
+
     return (
         <div className="sidebar">
             <div className="sidebar-logo">
                 <svg width="148" height="36" viewBox="0 0 148 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_109_73)">
+                    <g clipPath="url(#clip0_109_73)">
                     <path d="M47.9681 11.9525C47.9681 11.9525 42.1396 11.9525 41.895 14.5406V21.4594C42.1396 24.0476 47.9681 24.0476 47.9681 24.0476C47.9681 24.0476 53.7813 24.0476 54.036 21.4594V20.201H51.2797V20.4455C50.7651 21.4135 47.963 21.4135 47.963 21.4135C47.963 21.4135 45.1608 21.4135 44.6462 20.4455V15.5545C45.1608 14.5865 47.963 14.5865 47.963 14.5865C47.963 14.5865 50.7651 14.5865 51.2797 15.5545V15.799H54.036V14.5406C53.7813 11.9525 47.9681 11.9525 47.9681 11.9525Z" fill="white"/>
                     <path d="M65.041 16.6142H58.8202V12.2225H56.0638V23.7877H58.8202V19.3858H65.041V23.7877H67.7973V12.2225H65.041V16.6142Z" fill="white"/>
                     <path d="M75.8929 11.9525C75.8929 11.9525 70.0644 11.9525 69.8199 14.5406V23.7928H72.5762V15.5545C73.0908 14.5865 75.8929 14.5865 75.8929 14.5865C75.8929 14.5865 78.6951 14.5865 79.2097 15.5545V17.1135H74.5632L76.6521 19.8851H79.2097V23.7928H81.966V14.5406C81.7214 11.9525 75.8929 11.9525 75.8929 11.9525Z" fill="white"/>
@@ -39,8 +46,20 @@ const Sidebar = () => {
                 <div className="nav-item">
                     Overview Data
                 </div>
-                <div className="nav-item">
-                    Events
+                <div className={ isActive ? 'nav-item nav-dropdown dropdown-active': 'nav-item nav-dropdown'} onClick={toggleClass} >
+                    <div className="dropdown-label">
+                        <div>Events</div>
+                        <div className="dropdown-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.41 8.58984L12 13.1698L16.59 8.58984L18 9.99984L12 15.9998L6 9.99984L7.41 8.58984Z" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div className="dropdown-list">
+                        <div className="dropdown-list-item">Champria Chillin’</div>
+                        <div className="dropdown-list-item">Champria Challenge</div>
+                        <div className="dropdown-list-item">SoS Spring 2022</div>
+                    </div>
                 </div>
                 <div className="nav-item">
                     About
