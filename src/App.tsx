@@ -1,12 +1,14 @@
-import React from 'react';
-import './App.css';
+import { useRoutes } from 'react-router-dom';
+import routes from './router';
 
-const App:React.FC = () => {
+const App = () => {
+  const content = useRoutes(routes);
   return (
-    <div className='app'>
-      <h6>Hello World</h6>
+    <div>
+      {content}
     </div>
+    
   );
 }
-
 export default App;
+
