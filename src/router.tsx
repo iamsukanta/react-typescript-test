@@ -1,7 +1,7 @@
-import SidebarLayout from './layouts/SidebarLayout';
-
+import { lazy } from 'react';
+const SidebarLayout = lazy(() => import('./layouts/SidebarLayout'));
 // Pages
-import Dashboard from './content/dashboard/index';
+const Dashboard = lazy(() => import('./content/dashboard'));
 
 const routes = [
   {

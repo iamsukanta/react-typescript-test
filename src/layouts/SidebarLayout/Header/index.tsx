@@ -38,7 +38,7 @@ const Header = () => {
             </div>
             <div className="bottom-header">
                 <div className="title">
-                    <h1>My Scrims</h1>
+                    My Scrims
                 </div>
                 <div className="sorting-section">
                     <div className="select-root">

@@ -123,6 +123,11 @@ body, html {
                             border: none;
                             background: transparent;
                             transition: all .2s ease;
+                            padding: 0px 10px;
+
+                            &:last-child {
+                                padding-right: 0px !important;
+                            }
                         }
                         ul {
                             list-style-type: none;
@@ -139,12 +144,9 @@ body, html {
                 .bottom-header {
                     padding: 0 35px 35px;
                     .title {
-                        h1 {
-                            font-size: 42px;
-                            font-weight: 800;
-                            color: #fff;
-                            font-family: Industry;
-                        }
+                        font-size: 42px;
+                        font-weight: 800;
+                        color: #fff;
                     }
 
                     .sorting-section {
@@ -172,7 +174,7 @@ body, html {
                             }
                         }
                         button {
-                            font-family: Industry;
+
                             background-color: #7fb8f4;
                             border: none;
                             border-radius: 6px;
@@ -246,7 +248,6 @@ body, html {
 }
 
 // Dashboard Style
-
 .dashboard-root {
     padding: 35px;
     display: grid;
@@ -265,8 +266,7 @@ body, html {
             .header-text {
                 font-size: 24px;
                 color: #fff;
-                font-weight: 800;
-                font-family: Industry;
+                font-weight: 80
             }
         }
 
@@ -312,7 +312,6 @@ body, html {
                         font-size: 12px;
                         font-weight: 800;
                         letter-spacing: 0;
-                        font-family: Industry;
                     }
 
                     .description {
@@ -345,7 +344,7 @@ body, html {
                         .custom-list {
                             font-size: 8px;
                             font-weight: 800;
-                            font-family: Industry;
+
                             line-height: 1;
                             letter-spacing: 0;
                             color: #fff;
