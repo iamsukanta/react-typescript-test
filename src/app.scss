@@ -202,7 +202,6 @@ body, html {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 30px;
             z-index: 10;
 
             .footer-menu {
@@ -213,6 +212,7 @@ body, html {
                 font-weight: 500;
                 letter-spacing: 0;
                 color: #aaa;
+                margin-left: 30px;
 
                 .footer-logo {
                     margin-right: 15px;
@@ -227,6 +227,7 @@ body, html {
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
+                margin-right: 30px;
 
                 .social-label {
                     margin-right: 20px;
